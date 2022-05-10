@@ -20,7 +20,7 @@ export default function Products({
 }) {
   const isMobile = useIsMobile(1024);
   const [searchQuery, setSearchQuery] = useState({
-    page: query.page || 1,
+    page: Number(query.page) || 1,
     search: query.search || "",
     promo: query.promo || false,
     active: query.active || false,
